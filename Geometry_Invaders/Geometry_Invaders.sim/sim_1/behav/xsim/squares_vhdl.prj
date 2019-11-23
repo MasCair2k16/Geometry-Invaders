@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Geometry_Invaders.srcs/sources_1/new/vga_sync_unit.vhd" \
+"../../../../Geometry_Invaders.srcs/sources_1/new/squares.vhd" \
+
+# Do not sort compile order
+nosort

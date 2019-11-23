@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov 22 16:05:39 2019
+# Process ID: 2136
+# Current directory: C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.runs/impl_1
+# Command line: vivado.exe -log gInvaders_Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source gInvaders_Top.tcl -notrace
+# Log file: C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.runs/impl_1/gInvaders_Top.vdi
+# Journal file: C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source gInvaders_Top.tcl -notrace

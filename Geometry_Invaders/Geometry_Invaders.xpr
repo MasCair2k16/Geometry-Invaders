@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="C:/Users/mcaird22/Desktop/final_project_folder/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.xpr">
+<Project Version="7" Minor="40" Path="C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="28e0942c6ac44de4bdebf6a67119e4cd"/>
@@ -119,7 +119,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="gInvaders_Top"/>
+        <Option Name="TopModule" Val="squares"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>

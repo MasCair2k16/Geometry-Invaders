@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.srcs/sources_1/new/vga_sync_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'vga_sync_unit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.srcs/sources_1/new/squares.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'squares'
