@@ -32,7 +32,7 @@ set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
 set_property ip_output_repo c:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.srcs/sources_1/new/vga_sync_unit.vhd
+  C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.srcs/sources_1/new/vga_sync.vhd
   C:/Users/iangle22/Desktop/DLD_final/Geometry-Invaders/Geometry_Invaders/Geometry_Invaders.srcs/sources_1/new/squares.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being

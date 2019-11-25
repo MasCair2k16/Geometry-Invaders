@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Nov 22 16:43:34 2019
+| Date         : Mon Nov 25 09:42:05 2019
 | Host         : LAB-SCI-214-22 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file squares_control_sets_placed.rpt
 | Design       : squares
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    11 |
-|    Minimum number of control sets                        |    11 |
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    49 |
+| Unused register locations in slices containing registers |    48 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,10 +39,10 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    11 |
+| Total control sets |    12 |
 | >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     1 |
+| >= 6 to < 8        |     2 |
 | >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
@@ -60,9 +60,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               1 |            1 |
 | No           | No                    | Yes                    |               4 |            3 |
-| No           | Yes                   | No                     |             102 |           27 |
+| No           | Yes                   | No                     |             111 |           34 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              20 |            6 |
+| Yes          | No                    | Yes                    |              20 |            7 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -76,12 +76,13 @@ Table of Contents
 |  video_on_BUFG                         |                            |                                    |                1 |              1 |
 |  vga_sync_unit/clk_divider_reg_n_0_[0] |                            | reset_IBUF                         |                2 |              2 |
 |  clk_IBUF_BUFG                         |                            | reset_IBUF                         |                1 |              2 |
-|  vga_sync_unit/Q[0]                    |                            | vga_sync_unit/h_count_reg_reg[9]_0 |                1 |              4 |
-|  update_pos_BUFG                       |                            | x[9]_i_1_n_0                       |                1 |              6 |
-|  update_pos_BUFG                       |                            | y[8]_i_1_n_0                       |                1 |              8 |
+|  vga_sync_unit/Q[0]                    |                            | vga_sync_unit/h_count_reg_reg[9]_0 |                2 |              4 |
+|  update_pos_BUFG                       |                            | dir_x18_out                        |                2 |              7 |
+|  update_pos_BUFG                       |                            | y[8]_i_1_n_0                       |                1 |              7 |
+|  vga_sync_unit/Q[0]                    |                            | vga_sync_unit/red_reg              |                5 |              8 |
 |  vga_sync_unit/clk_divider_reg_n_0_[0] | vga_sync_unit/v_count_reg0 | reset_IBUF                         |                3 |             10 |
-|  vga_sync_unit/clk_divider_reg_n_0_[0] | vga_sync_unit/Q[0]         | reset_IBUF                         |                3 |             10 |
-|  update_pos_BUFG                       |                            | y[31]_i_1_n_0                      |                8 |             25 |
+|  vga_sync_unit/clk_divider_reg_n_0_[0] | vga_sync_unit/Q[0]         | reset_IBUF                         |                4 |             10 |
+|  update_pos_BUFG                       |                            | y[31]_i_1_n_0                      |                8 |             26 |
 |  update_pos_BUFG                       |                            | x[31]_i_1_n_0                      |                8 |             27 |
 |  video_on_BUFG                         |                            | clear                              |                8 |             32 |
 +----------------------------------------+----------------------------+------------------------------------+------------------+----------------+

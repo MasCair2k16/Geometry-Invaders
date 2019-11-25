@@ -17,13 +17,14 @@ architecture Behavioral of squares is
    signal red_reg, red_next: std_logic_vector(3 downto 0) := (others => '0');
    signal green_reg, green_next: std_logic_vector(3 downto 0) := (others => '0');
    signal blue_reg, blue_next: std_logic_vector(3 downto 0) := (others => '0'); 
-   signal dir_x, dir_y : integer := 1;  
+   signal dir_x : integer := 3;
+   signal dir_y : integer := 1;  
    signal x, y : integer := 0;       
    signal box_xl, box_yt, box_xr, box_yb : integer := 0; 
    signal update_pos : std_logic := '0';  
 begin
    -- instantiate VGA sync circuit
-   vga_sync_unit: entity work.vga_sync_unit
+   vga_sync_unit: entity work.vga_sync
     port map(clk=>clk, reset=>reset, hsync=>hsync,
                vsync=>vsync, video_on=>video_on,
                pixel_x=>pixel_x, pixel_y=>pixel_y,
@@ -41,7 +42,7 @@ begin
     begin
         if rising_edge(video_on) then
             counter := counter + 1;
-            if counter > 50 then
+            if counter > 750 then
                 counter := 0;
                 update_pos <= '1';
             else
@@ -54,11 +55,11 @@ begin
     process ( update_pos, x, y, box_xr, box_xl, box_yt, box_yb, dir_x, dir_y )
     begin
         if rising_edge(update_pos) then 
-            if (box_xr > 639) and (dir_x = 1) then
-                dir_x <= -1;
-                x <= 539;
-            elsif (box_xl < 1) and (dir_x = -1) then
-                dir_x <= 1;    
+            if (box_xr > 639) and (dir_x = 3) then
+                dir_x <= -3;
+                x <= 589;
+            elsif (box_xl < 1) and (dir_x = -3) then
+                dir_x <= 3;    
                 x <= 0;
             else
                 x <= x + dir_x;
@@ -66,7 +67,7 @@ begin
             
             if (box_yb > 479) and (dir_y = 1) then
                 dir_y <= -1;
-                y <= 379;
+                y <= 429;
             elsif (box_yt < 1) and (dir_y = -1) then
                 dir_y <= 1;   
                 y <= 0; 
@@ -88,7 +89,7 @@ begin
                blue_next <= "1111"; 
            else    
                -- background color blue
-               red_next <= "0000";
+               red_next <= "1111";
                green_next <= "0000";
                blue_next <= "0000";
            end if;   
@@ -101,7 +102,7 @@ begin
           if (video_on = '1') then
             red_reg <= red_next;
             green_reg <= green_next;
-            blue_reg <= blue_next;   
+            blue_reg <= blue_next;                 
           else
             red_reg <= "0000";
             green_reg <= "0000";
